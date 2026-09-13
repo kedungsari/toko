@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah Data Kependudukan Digital — Kalurahan Pengasih</title>
+<meta name="description" content="Rumah Data Kependudukan Digital Kalurahan Pengasih sedang disiapkan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EDEAE0;
+    --paper-line: #D8D1BE;
+    --ink: #1B2A3A;
+    --ink-soft: #55636F;
+    --stamp: #9C2B22;
+    --brass: #93732A;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+  }
+
+  body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 20px;
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px);
+    background-size: 100% 34px;
+    background-position: 0 128px;
+  }
+
+  .lembar{
+    width:100%;
+    max-width:560px;
+  }
+
+  .kop{
+    text-align:center;
+    font-size:11.5px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    line-height:1.6;
+    padding-bottom:22px;
+    border-bottom:1px solid var(--paper-line);
+    margin-bottom:40px;
+  }
+  .kop strong{
+    color:var(--ink);
+    font-weight:600;
+  }
+
+  .logo-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:26px;
+  }
+  .logo-plat{
+    background:#fff;
+    padding:18px 26px;
+    box-shadow:0 1px 0 rgba(27,42,58,.05), 0 10px 28px rgba(27,42,58,.10);
+    animation:tera .6s cubic-bezier(.2,.9,.3,1) both;
+  }
+  .logo-plat img{
+    display:block;
+    width:min(300px, 62vw);
+    height:auto;
+  }
+  .segera{
+    text-align:center;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.14em;
+    color:var(--brass);
+    margin:0 0 30px;
+  }
+  .segera::before,.segera::after{
+    content:"";
+    display:inline-block;
+    width:22px;
+    height:1px;
+    background:var(--brass);
+    vertical-align:middle;
+    margin:0 10px 3px;
+  }
+
+  @keyframes tera{
+    0%{ transform:scale(1.12); opacity:0; }
+    60%{ transform:scale(.98); opacity:1; }
+    100%{ transform:scale(1); opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .logo-plat{ animation:none; }
+  }
+
+  h1{
+    font-family:'Newsreader',serif;
+    font-weight:600;
+    font-size:clamp(28px, 6vw, 40px);
+    line-height:1.15;
+    text-align:center;
+    margin:0 0 6px;
+    color:var(--ink);
+  }
+  .lokasi{
+    font-family:'Newsreader',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(17px, 3.4vw, 20px);
+    text-align:center;
+    color:var(--stamp);
+    margin:0 0 26px;
+  }
+
+  p.keterangan{
+    text-align:center;
+    font-size:15px;
+    line-height:1.7;
+    color:var(--ink-soft);
+    max-width:440px;
+    margin:0 auto 42px;
+  }
+
+  .buku{
+    border-top:1px solid var(--paper-line);
+  }
+  .baris{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 2px;
+    border-bottom:1px solid var(--paper-line);
+  }
+  .baris .nama{
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .baris .catatan{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .baris .status{
+    font-size:11px;
+    letter-spacing:.03em;
+    color:var(--brass);
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  footer{
+    margin-top:44px;
+    text-align:center;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  footer .garis{
+    width:36px;
+    height:1px;
+    background:var(--paper-line);
+    margin:0 auto 14px;
+  }
+
+  @media (max-width:420px){
+    .baris{ flex-direction:column; align-items:flex-start; gap:2px; }
+    .baris .status{ align-self:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="lembar">
+
+    <div class="kop">
+      <strong>Pemerintah Kalurahan Pengasih</strong><br>
+      Kapanewon Pengasih · Kabupaten Kulon Progo · Daerah Istimewa Yogyakarta
+    </div>
+
+    <div class="logo-wrap">
+      <div class="logo-plat">
+        <img src="logo.jpeg" alt="Rumah Data Kependudukan Digital">
+      </div>
+    </div>
+    <div class="segera">SEGERA HADIR</div>
+
+    <h1>Kependudukan Digital</h1>
+    <div class="lokasi">Kalurahan Pengasih</div>
+
+    <p class="keterangan">
+      Satu sistem digital untuk mencatat, mengelola, dan melaporkan data
+      kependudukan warga Kalurahan Pengasih sedang disiapkan. Halaman ini
+      akan diperbarui begitu layanannya siap digunakan.
+    </p>
+
+    <div class="buku">
+      <div class="baris">
+        <div>
+          <div class="nama">Data Kependudukan</div>
+          <div class="catatan">Induk data warga per KK, per padukuhan, hingga per RT</div>
+        </div>
+        <div class="status">Disiapkan</div>
+      </div>
+      <div class="baris">
+        <div>
+          <div class="nama">Statistik & Pelaporan</div>
+          <div class="catatan">Rekap kependudukan, sosial, dan ekonomi warga</div>
+        </div>
+        <div class="status">Disiapkan</div>
+      </div>
+      <div class="baris">
+        <div>
+          <div class="nama">Layanan Mandiri Warga</div>
+          <div class="catatan">Akses dan pembaruan data oleh warga sendiri</div>
+        </div>
+        <div class="status">Disiapkan</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="garis"></div>
+      Rumah Data Kependudukan Digital<br>
+      Kalurahan Pengasih, Kapanewon Pengasih, Kabupaten Kulon Progo
+    </footer>
+
+  </div>
+
+</body>
+</html>
